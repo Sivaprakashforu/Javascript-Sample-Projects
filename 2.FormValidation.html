@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validations</title>
+        
+        <script>
+            
+            function checkFormData(){
+                
+                var message= " ";
+                
+                //Access Text Box.
+                
+                var tname = document.getElementById('txtName').value;
+                var temail = document.getElementById('txtEmail').value;
+                var tage = document.getElementById('txtAge').value;
+                
+                //Access Radio Value.
+                
+                var tgender1 = document.getElementById('male').checked;
+                var tgender2 = document.getElementById('female').checked;
+                
+                //Access Check Box.
+                var tagree = document.getElementById('agree').checked;
+                
+                message += "Name : " + tname + "<br>";
+                message += "Email : " + temail + "<br>";
+                message += "Age : " + tage + "<br>";
+                message += "Gender : " + tgender1 + "<br>";
+                message += "Gender : " + tgender2 + "<br>";
+                message += "Agree : " + tagree + "<br>";
+                
+                document.getElementById('tmessage').innerHTML=message;
+               
+                
+            }
+        
+        
+        </script>
+    </head>
+    
+    <body>
+        
+        <p id="tmessage"> si</p>
+        
+        <h1>Form Validations</h1>
+        
+        <form id="form1" action="#" method="get">
+            
+            Your Name : <input type="text" name="txtName" id="txtName"/><br><br>
+            
+            Your Email : <input type="email" name="txtEmail" id="txtEmail"/><br><br>
+            
+            Your Age : <input type="number" name="txtAge" id="txtAge"/> <br><br>
+            
+            Male <input type="radio" name="gender" id="male"/>
+            
+            Female <input type="radio" name="gender" id="female"/><br><br>
+            
+            <input type="checkbox" name="agree" id="agree"> Agree to our Terms<br><br>
+            
+            <input type="submit" value="Submit" onclick="checkFormData();"/>          
+            
+        
+        </form>
+    
+    
+    </body>
+
+
+</html>

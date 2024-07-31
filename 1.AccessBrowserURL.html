@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <meta charset="utf-8">
+        
+        <title>Javascript Project-URL</title> 
+        
+        <script>
+            
+            function goBack(){
+                history.back();
+            }
+            
+            function goForward(){
+                history.forward();
+            }
+            
+        </script>
+    
+    </head>
+    
+    <body>
+        
+        <div>
+            
+            <a href="#" onclick="goBack();">Go Back.</a><br>
+            
+            <a href="#" onclick="history.forward();">Go Forward.</a>
+            
+            <!--<a href="#" onclick="history.forward();">Go Forward.</a>-->
+            
+            <a href="https://www.bigprime.net">Bigprime</a>
+        
+
+            <h1>The Window History Object</h1>
+            <h2>The history.length Property</h2>
+
+            <p>Number of URLs in history list:</p>
+
+            <p id="demo"></p>
+
+            <p>Since this is a new window frame, history.length will always return 1.</p>
+
+            <script>
+            let length = window.history.length;
+            document.getElementById("demo").innerHTML = length;
+            </script>
+
+            <h1>The Window History Object</h1>
+            <h2>The history.go() Method</h2>
+
+            <button onclick="history.go(2)">Go 2 pages Forward</button>
+            
+            <p>Clicking on the "Go 2 pages Forward" will not result in any action, because there is no previous page in the history list.</p>
+            
+            <button onclick="history.go(-2)">Go 2 pages Back</button>
+
+            <p>Clicking on the "Go 2 pages back" will not result in any action, because there is no previous page in the history list.</p>
+            
+            
+            
+                      
+            
+            
+        
+        </div>
+    
+    </body>
+
+
+</html>
